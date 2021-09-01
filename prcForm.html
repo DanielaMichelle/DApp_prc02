@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 2</title>
+</head>
+<body>
+    <form method="GET" autocomplete="on"  target="_self">
+        <label for="name">First Name:</label>
+        <br>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="lname">Last Name</label>
+        <br>
+        <input type="text" name="lname" id="lname">
+        <br>
+        <br>
+        <input type="button" value="Enviar">
+        <input type="submit">
+        <br><br>
+        <h3>Probando Inputs:</h3>
+        <fieldset>
+            <legend>Cursos:</legend>
+            <input type="radio" name="Matematica" id="Matematica" value="1" checked="checked">
+            <label for="Matematica">Matematica</label><br>
+            <input type="radio" name="Comunicacion" id="Comunicacion" value="2">
+            <label for="Comunicacion">Comunicacion</label><br>
+            <input type="radio" name="fisica" id="fisica" value="3">
+            <label for="fisica">Fisica</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Semestre:</legend>
+                <input type="checkbox" name="II" id="II" value="2" checked="checkbox">
+                <label for="II">II</label><br>
+                <input type="checkbox" name="IV" id="IV" value="4">
+                <label for="IV">IV</label><br>
+                <input type="checkbox" name="VI" id="VI" value="6">
+                <label for="VI">VI</label><br>
+                <input type="checkbox" name="VIII" id="VIII" value="8">
+                <label for="VIII">VIII</label><br>
+                <input type="checkbox" name="X" id="X" value="10">
+                <label for="X">X</label><br>
+        </fieldset>
+        <br>
+        <label>Titulos:</label>
+        <select name="listaTitulo" id="Titulo" >
+            <option value="bachiller">Bachiller</option>
+            <option value="doctor">Doctor</option>
+            <option value="phd">PhD</option>
+        </select>
+        <br>
+        <br>
+        <labe>Comentario:</labe><br>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        <br>
+        <button type="button" onclick="alert('ENVIADO :D')">Click Me!</button>
+        <br>
+        <br>
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <input type="submit">
+    </form>
+</body>
+</html>
