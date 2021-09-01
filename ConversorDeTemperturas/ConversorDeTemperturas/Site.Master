@@ -6,15 +6,19 @@
     <title>Conversor de temperatura</title>
 </head>
 <body>
-    <form runat="server" id="Form1" method="POST" oninput="resultado.value=(parseFloat(valor.value)-32)/1.8">
+    <form runat="server" id="Form1" method="POST">
     <div>
         <h1>Conversor de temperatura</h1>
         Convertir: &nbsp;
-        <input runat="server" type="number" id="valor">&nbsp;Fahrenheith a Centigrados.
+        <input runat="server" type="number" id="valor">&nbsp;Fahrenheith a <select id="Temperaturas" runat="server"/>
         <br/><br/>
-        <p>Resultado: </p>&nbsp;
-        <output runat="server" id="Convertir" name="resultado" for="valor"></output>
+        <input type="submit" id="Convertir" runat="server" value="Aceptar" OnServerClick ="Convertir_ServerClick"/>
+        <br/><br/>
+        <div style="font-weight:bold" id="Resultado" runat="server"></div>&nbsp;
     </div>
+    <label for="comment"">Deja tu comentario:</label><br>
+    <textarea runat="server" name="comment" id="comment" cols="30" rows="10">
+    </textarea>
     </form>
 </body>
 </html>
