@@ -17,6 +17,7 @@ namespace ConversorDeTemperturas
                 Temperaturas.Items.Add(new ListItem("Fahrenheit","2"));
                 Temperaturas.Items.Add(new ListItem("Kelvin","3"));
             }
+            Grafico.Visible = false;
         }
         protected void Convertir_ServerClick(Object sender, EventArgs e)
         {
@@ -41,6 +42,15 @@ namespace ConversorDeTemperturas
                 Resultado.InnerText += conversion.ToString() + " " + elemento.Text;
             }
         }
+
+        protected void MostrarGrafico_ServerClick(Object sender, EventArgs e)
+        {
+            Grafico.Src = "figura" + Temperaturas.SelectedIndex.ToString() + ".jfif";
+            Grafico.Alt = "Grafico Temperatura";
+            Grafico.Visible = true;
+
+        }
+
     }
 
 }
