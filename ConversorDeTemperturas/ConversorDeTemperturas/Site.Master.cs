@@ -29,17 +29,44 @@ namespace ConversorDeTemperturas
                 conversion = (Fahrenheit - 32) / (decimal)1.8;
                 Resultado.InnerText = Fahrenheit.ToString() + " Fahrenheit = ";
                 Resultado.InnerText += conversion.ToString() + " Centigrados";
+                if (Fahrenheit < 0)
+                {
+                    Resultado.Style["color"] = "Red";
+                    Resultado.InnerText += " Ingreso una temperatura menor a cero";
+                }
+                else
+                {
+                    Resultado.Style["color"] = "Blue";
+                }
             }
             if (elemento.Value == "2")
             {
                 Resultado.InnerText = Fahrenheit.ToString() + " Fahrenheit = ";
                 Resultado.InnerText += Fahrenheit.ToString() + " Fahrenheit";
+                if (Fahrenheit < 0)
+                {
+                    Resultado.Style["color"] = "Red";
+                    Resultado.InnerText += " Ingreso una temperatura menor a cero";
+                }
+                else
+                {
+                    Resultado.Style["color"] = "Blue";
+                }
             }
             if (elemento.Value == "3")
             {
                 conversion = ((Fahrenheit - 32) / (decimal)1.8) + (decimal)273.15;
                 Resultado.InnerText = Fahrenheit.ToString() + " Fahrenheit = ";
                 Resultado.InnerText += conversion.ToString() + " " + elemento.Text;
+                if (Fahrenheit < 0)
+                {
+                    Resultado.Style["color"] = "Red";
+                    Resultado.InnerText += " Ingreso una temperatura menor a cero";
+                }
+                else
+                {
+                    Resultado.Style["color"] = "Blue";
+                }
             }
         }
 
